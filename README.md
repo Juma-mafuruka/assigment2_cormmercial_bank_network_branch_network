@@ -1,19 +1,25 @@
-# assigment2_cormmercial_bank_branch_network
-# Commercial Bank Branch Network Automation
+ COURSE: IT 222
+ ASSIGNMENT NUMBER: 2
+ SCENARIO:A commercial bank operates two branches. Customer-service computers process client transactions, while administrative computers are used by managers and internal staff. Network Data Device R1 R1 R1 Interface/Port Gi0/0.11 Gi0/0.21 Gi0/1 VLAN 11 Customer Service 21 Administration Address/Configuration 172.16.11.1/24 172.16.21.1/24 — 10.2.2.1/30R2 Gi0/0.11 11 Customer Service 172.16.31.1/24 R2 Gi0/0.21 21 Administration 172.16.41.1/24 R2 Gi0/1 — 10.2.2.2/30 SW1 Gi0/1 Trunk Allow 11,21 SW1 Gi0/2 11 CS-PC1 172.16.11.10/24 SW1 Gi0/3 21 Admin-PC1 172.16.21.10/24 SW2 Gi0/1 Trunk Allow 11,21 SW2 Gi0/2 11 CS-PC2 172.16.31.10/24 SW2 Gi0/3 21 Admin-PC2 172.16.41.10/24 Use OSPF process 1, area 0. 
+ GROUP NUMBER: 2
+ GROUP MEMBERS
+ 1. SALOME PETER MHOJA 2024/0026
+ 2. GRASIANA BONIFACE HAULE 2024/1110
+ 3. EDWARD MALIMA NYAGANGA 2024/1280
+ 4. FARIDA OSWARD KALIKENE 2024/1308
 
-## 📌 Project Overview
+  Project Overview
 
-The **Commercial Bank Branch Network Automation** project is a network configuration, verification, and testing solution developed using **Python, Netmiko, Cisco IOS, and GNS3**.
+The "Commercial Bank Branch Network Automation" project is a network configuration, verification, and testing solution developed using "Python, Netmiko, Cisco IOS, and GNS3".
 
-The project simulates a commercial bank with two interconnected branches. Each branch contains a Cisco router and a Layer 2 switch supporting separate **Customer Service** and **Administration** VLANs.
+The project simulates a commercial bank with two interconnected branches. Each branch contains a Cisco router and a Layer 2 switch supporting separate "Customer Service" and "Administration" VLANs.
 
-Network configuration and verification are automated using Python and **Netmiko**, while **OSPF Area 0** provides dynamic routing between the two branches.
+Network configuration and verification are automated using Python and "Netmiko", while **OSPF Area 0** provides dynamic routing between the two branches.
 
-The main objective is to achieve reliable **end-to-end connectivity between all network segments and end-user devices** while reducing manual configuration through network automation.
+The main objective is to achieve reliable "end-to-end connectivity between all network segments and end-user devices" while reducing manual configuration through network automation.
 
----
 
-## 🎯 Project Objectives
+ Project Objectives
 
 The project aims to:
 
@@ -27,29 +33,28 @@ The project aims to:
 - Demonstrate practical Network Automation using a GNS3-based environment.
 - Achieve complete connectivity between Branch 1 and Branch 2.
 
----
 
-# 🏗️ Network Architecture
+ Network Architecture
 
 The network consists of two bank branches connected through a point-to-point link.
 
-### Branch 1
+ Branch 1
 
-**R1 + SW1**
-
-- VLAN 11 → Customer Service
-- VLAN 21 → Administration
-
-### Branch 2
-
-**R2 + SW2**
+"R1 + SW1"
 
 - VLAN 11 → Customer Service
 - VLAN 21 → Administration
 
-The routers are connected using a `/30` point-to-point network and exchange routing information using **OSPF Area 0**.
+ Branch 2
 
-```text
+"R2 + SW2"
+
+- VLAN 11 → Customer Service
+- VLAN 21 → Administration
+
+The routers are connected using a `/30` point-to-point network and exchange routing information using "OSPF Area 0".
+
+text
                          OSPF AREA 0
                     Point-to-Point Link
                     10.2.2.0/30
