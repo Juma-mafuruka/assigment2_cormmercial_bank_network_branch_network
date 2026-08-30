@@ -1,6 +1,7 @@
  COURSE: IT 222
  ASSIGNMENT NUMBER: 2
  SCENARIO:A commercial bank operates two branches. Customer-service computers process client transactions, while administrative computers are used by managers and internal staff. Network Data Device R1 R1 R1 Interface/Port Gi0/0.11 Gi0/0.21 Gi0/1 VLAN 11 Customer Service 21 Administration Address/Configuration 172.16.11.1/24 172.16.21.1/24 — 10.2.2.1/30R2 Gi0/0.11 11 Customer Service 172.16.31.1/24 R2 Gi0/0.21 21 Administration 172.16.41.1/24 R2 Gi0/1 — 10.2.2.2/30 SW1 Gi0/1 Trunk Allow 11,21 SW1 Gi0/2 11 CS-PC1 172.16.11.10/24 SW1 Gi0/3 21 Admin-PC1 172.16.21.10/24 SW2 Gi0/1 Trunk Allow 11,21 SW2 Gi0/2 11 CS-PC2 172.16.31.10/24 SW2 Gi0/3 21 Admin-PC2 172.16.41.10/24 Use OSPF process 1, area 0. 
+ 
  GROUP NUMBER: 2
  GROUP MEMBERS
  1. SALOME PETER MHOJA 2024/0026
